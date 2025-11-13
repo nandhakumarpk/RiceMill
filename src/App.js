@@ -10,14 +10,14 @@ import Team from './components/Team';
 import Testimonial from './components/Testimonial';
 import Contact from './components/Contact';
 import NotFound from './components/NotFound';
-// import Navbar from './components/Navbar';
+import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
 function App() {
   return (
     <Router>
       <div className="App">
-        {/* <Navbar />  --add it if navbar required in future*/}
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
