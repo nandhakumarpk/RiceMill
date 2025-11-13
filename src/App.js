@@ -9,6 +9,9 @@ import Product from './components/Product';
 import Team from './components/Team';
 import Testimonial from './components/Testimonial';
 import Contact from './components/Contact';
+import Login from './components/Login';
+import Register from './components/Register';
+import ForgotPassword from './components/ForgotPassword';
 import NotFound from './components/NotFound';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -26,6 +29,9 @@ function App() {
           {/* <Route path="/team" element={<Team />} /> */}
           {/* <Route path="/testimonial" element={<Testimonial />} /> */}
           <Route path="/contact" element={<Contact />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />

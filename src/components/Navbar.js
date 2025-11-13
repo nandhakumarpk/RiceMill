@@ -44,7 +44,7 @@ const Navbar = () => {
       </div>
 
       {/* Navbar */}
-      <nav className={`navbar navbar-expand-lg navbar-dark fixed-top py-lg-0 px-lg-5 wow fadeIn ${isScrolled ? 'bg-dark' : ''}`} data-wow-delay="0.1s" style={{ top: isScrolled ? '0' : '45px' }}>
+      <nav className={`navbar navbar-expand-lg navbar-dark fixed-top py-lg-0 px-lg-5 wow fadeIn ${isScrolled || location.pathname === '/login' || location.pathname === '/register' || location.pathname === '/forgot-password' ? 'bg-dark' : ''}`} data-wow-delay="0.1s" style={{ top: isScrolled ? '0' : '45px' }}>
         <Link to="/" className="navbar-brand ms-4 ms-lg-0">
           <h1 className="text-primary m-0">Baker</h1>
         </Link>
@@ -55,17 +55,19 @@ const Navbar = () => {
           <div className="navbar-nav mx-auto p-4 p-lg-0">
             <Link to="/" className={`nav-item nav-link ${location.pathname === '/' ? 'active' : ''}`}>Home</Link>
             <Link to="/about" className={`nav-item nav-link ${location.pathname === '/about' ? 'active' : ''}`}>About</Link>
-            <Link to="/service" className={`nav-item nav-link ${location.pathname === '/service' ? 'active' : ''}`}>Services</Link>
+            {/* <Link to="/service" className={`nav-item nav-link ${location.pathname === '/service' ? 'active' : ''}`}>Services</Link> */}
             <Link to="/product" className={`nav-item nav-link ${location.pathname === '/product' ? 'active' : ''}`}>Products</Link>
-            <div className="nav-item dropdown">
+            {/* <div className="nav-item dropdown">
               <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
               <div className="dropdown-menu m-0">
                 <Link to="/team" className="dropdown-item">Our Team</Link>
                 <Link to="/testimonial" className="dropdown-item">Testimonial</Link>
                 <Link to="/404" className="dropdown-item">404 Page</Link>
               </div>
-            </div>
+            </div> */}
             <Link to="/contact" className={`nav-item nav-link ${location.pathname === '/contact' ? 'active' : ''}`}>Contact</Link>
+            <Link to="/login" className={`nav-item nav-link ${location.pathname === '/login' ? 'active' : ''}`}>Login</Link>
+            {/* <Link to="/register" className={`nav-item nav-link ${location.pathname === '/register' ? 'active' : ''}`}>Register</Link> */}
           </div>
           <div className="d-none d-lg-flex">
             <div className="flex-shrink-0 btn-lg-square border border-light rounded-circle">
